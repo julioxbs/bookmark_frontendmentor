@@ -49,7 +49,7 @@ Array.from(listOptions).map((list, index) => {
     let h2 = carrousel?.children[1].children[0] as HTMLElement;
     let p = carrousel?.children[1].children[1] as HTMLElement;
 
-    img.src = `images/illustration-features-tab-${index + 1}.svg`;
+    img.src = `../public/images/illustration-features-tab-${index + 1}.svg`;
     h2.textContent = tabInfo[index].title;
     p.textContent = tabInfo[index].content;
 
@@ -73,7 +73,7 @@ handleEmail?.addEventListener("click", () => {
           <p>Whoops, make sure it's an email</p>
         </div>
         <p class="warning error_icon">
-          <img src="images/icon-error.svg" alt="icon error">
+          <img src="./public/images/icon-error.svg" alt="icon error">
         </p>
         `
       );

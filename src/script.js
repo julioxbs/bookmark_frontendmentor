@@ -1,4 +1,5 @@
 "use strict";
+exports.__esModule = true;
 var iconArrow = document.querySelectorAll(".icon-arrow");
 var details = document.querySelectorAll("details");
 var carrousel = document.querySelector(".carrousel");
@@ -40,7 +41,7 @@ Array.from(listOptions).map(function (list, index) {
         var img = carrousel === null || carrousel === void 0 ? void 0 : carrousel.children[0].children[0];
         var h2 = carrousel === null || carrousel === void 0 ? void 0 : carrousel.children[1].children[0];
         var p = carrousel === null || carrousel === void 0 ? void 0 : carrousel.children[1].children[1];
-        img.src = "./public/images/illustration-features-tab-".concat(index + 1, ".svg");
+        img.src = "../public/images/illustration-features-tab-".concat(index + 1, ".svg");
         h2.textContent = tabInfo[index].title;
         p.textContent = tabInfo[index].content;
         setTimeout(function () {
@@ -54,7 +55,7 @@ handleEmail === null || handleEmail === void 0 ? void 0 : handleEmail.addEventLi
     if (inputEmail.value === "") {
         inputEmail.classList.add("error");
         if (inputEmail.className === "error") {
-            inputDiv === null || inputDiv === void 0 ? void 0 : inputDiv.insertAdjacentHTML("beforeend", "<div class=\"warning error_message\">\n          <p>Whoops, make sure it's an email</p>\n        </div>\n        <p class=\"warning error_icon\">\n          <img src=\"images/icon-error.svg\" alt=\"icon error\">\n        </p>\n        ");
+            inputDiv === null || inputDiv === void 0 ? void 0 : inputDiv.insertAdjacentHTML("beforeend", "<div class=\"warning error_message\">\n          <p>Whoops, make sure it's an email</p>\n        </div>\n        <p class=\"warning error_icon\">\n          <img src=\"./public/images/icon-error.svg\" alt=\"icon error\">\n        </p>\n        ");
         }
     }
     if (inputEmail.value != "") {
