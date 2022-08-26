@@ -1,4 +1,5 @@
 "use strict";
+
 var iconArrow = document.querySelectorAll(".icon-arrow");
 var details = document.querySelectorAll("details");
 var carrousel = document.querySelector(".carrousel");
@@ -6,6 +7,7 @@ var listOptions = document.querySelectorAll(".list_options");
 var handleEmail = document.querySelector("#handleEmail");
 var menuMobileButton = document.querySelector("#menu__icon");
 var closeMenuMobile = document.querySelector("#btn_close");
+
 var tabInfo = [
     {
         title: "Bookmark in one click",
