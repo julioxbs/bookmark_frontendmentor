@@ -1,5 +1,4 @@
 "use strict";
-exports.__esModule = true;
 var iconArrow = document.querySelectorAll(".icon-arrow");
 var details = document.querySelectorAll("details");
 var carrousel = document.querySelector(".carrousel");
