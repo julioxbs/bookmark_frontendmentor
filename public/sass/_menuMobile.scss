@@ -1,0 +1,84 @@
+#menu_open {
+  padding: 1rem;
+  
+  &.open {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background-color: rgba(37, 43, 70, .98);
+    height: 100%;
+    width: 100%;
+    z-index: 99999;
+
+    animation-name: fade;
+    animation-duration: .5s;
+  }
+
+  &.close {
+    display: none;
+  }
+
+  .content {
+    width: 90%;
+    margin: 0 auto;
+
+    .content_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        #btn_close {
+            cursor: pointer;
+        }
+    }
+
+    ul {
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+
+        li {
+            width: 100%;
+            padding: 1.5rem 0;
+            border-bottom: 0.5px solid $grayish-blue;
+            text-transform: uppercase;
+            color: $text-color;
+            cursor: pointer;
+            transition: all .3s;
+
+            &:hover {
+                color: $soft-red;
+            }
+        }
+    }
+
+    button {
+        @include btnReset;
+        width: 100%;
+        border: 2px solid #fff;
+        background-color: transparent;
+        color: $text-color;
+        padding: 0.8rem 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 3px;
+        margin-top: 1rem;
+        transition: background .3s;
+
+        &:hover {
+            background-color: $soft-red;
+        }
+    }
+  }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,65 @@
+.questions {
+    grid-column: 2 / -2;
+    grid-row: 4;
+    margin: 5rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .top {
+        @include topText;
+
+        h2 {
+            @include commonTitleColor;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            @include commonPColor;
+        }
+    }
+
+    .middle {
+        max-width: 600px;
+        width: 100%;
+        margin: 3rem auto;
+
+        details {
+            border-bottom: 1px solid $grayish-blue;
+            padding: 0;
+            cursor: pointer;
+
+            summary {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 1rem 0;
+
+                .icon-arrow {
+                    background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2212%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%235267DF%22%20stroke-width%3D%223%22%20d%3D%22M1%201l8%208%208-8%22%2F%3E%0A%3C%2Fsvg%3E');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 25px;
+                    height: 25px;
+                }
+                
+                .icon-arrow--down {
+                    transform: rotate(180deg);
+                    background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2212%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23fa5757%22%20stroke-width%3D%223%22%20d%3D%22M1%201l8%208%208-8%22%2F%3E%0A%3C%2Fsvg%3E');
+                }
+            }
+
+            p {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    button {
+        display: block;
+        margin: 0 auto;
+        @include commonButton;
+        background-color: $soft-blue;
+    }
+}

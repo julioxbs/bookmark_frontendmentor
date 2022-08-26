@@ -1,0 +1,127 @@
+.features {
+  margin: 5rem 0;
+  grid-row: 2;
+  grid-column: 2 / -2;
+
+  .features_text {
+    text-align: center;
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+
+    h2 {
+      @include commonTitleColor;
+    }
+
+    p {
+      @include commonPColor;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .feature_options {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+
+    ul {
+      @include d-flex-justify-between;
+
+      li {
+        color: $grayish-blue;
+        border-bottom: 1.5px solid $grayish-blue;
+        width: 100%;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        padding-bottom: 1rem;
+
+        &:hover {
+          color: $soft-red;
+        }
+
+        &.list_active::after {
+          border-bottom: 3px solid $soft-red;
+          font-weight: bold;
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 50%;
+          transform: translateX(50%);
+        }
+      }
+
+      @media only screen and (max-width: 700px) {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+
+        li {
+          text-align: center;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .feature_carrousel {
+    margin-top: 5rem;
+
+    .carrousel {
+      display: grid;
+      grid-template-columns: 400px 400px;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 2rem;
+
+      @media only screen and (max-width: 840px) {
+        grid-template-columns: 1fr;
+      }
+
+      .right-side {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+
+        h2 {
+          @include commonTitleColor;
+        }
+
+        p {
+          line-height: 1.5;
+          @include commonPColor;
+        }
+
+        button {
+          @include commonButton;
+          background-color: $soft-blue;
+        }
+
+        @media only screen and (max-width: 700px) {
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.slideUp {
+  animation-name: slide-up;
+  animation-duration: 1s;
+}
