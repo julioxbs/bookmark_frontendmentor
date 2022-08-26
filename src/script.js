@@ -40,7 +40,7 @@ Array.from(listOptions).map(function (list, index) {
         var img = carrousel === null || carrousel === void 0 ? void 0 : carrousel.children[0].children[0];
         var h2 = carrousel === null || carrousel === void 0 ? void 0 : carrousel.children[1].children[0];
         var p = carrousel === null || carrousel === void 0 ? void 0 : carrousel.children[1].children[1];
-        img.src = "images/illustration-features-tab-".concat(index + 1, ".svg");
+        img.src = "./public/images/illustration-features-tab-".concat(index + 1, ".svg");
         h2.textContent = tabInfo[index].title;
         p.textContent = tabInfo[index].content;
         setTimeout(function () {
